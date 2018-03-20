@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head> 
+<title> ATMPROJECT </title>
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ATMPROJECT1.css">
+
+
+<body onload="startTime()">
+
+	<p class="text"><b> ADMIN <b></p>
+	<div id="txt" class="time"> <b> <b> </div>
+	
+	<p class="text1"><b> WELCOME TO ATM SERVICES<b> </p>
+
+	<div class="loginbox">
+	<img src="image5.png" class="image5">
+		<h1>Login Here</h1>
+			<form>	
+			<p>CardNumber</p>
+			<input type="text" name="CardNumber" placeholder="Enter Card Number" required>
+			<p>Pin</p>
+			<input type="pin" name="Pin" placeholder="Enter Pin" required>
+			<a href="login.html">
+				<button type="button" value="submit">Login</button>
+			</a><br>
+			<a href="pinchange.html"> Forgot Pin? </a><br>
+			<a href="register.html"> Create New Account </a>
+			</form>
+	</div>
+
+</body>
+</head>
+</html>

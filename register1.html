@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head> 
+<title> ATMPROJECT </title>
+<meta charset="UTF-8">
+<meta name="viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ATMPROJECT1.css">
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+<body>
+
+
+<p class="text2register"> WELCOME TO ATM SERVICES </p>
+<div id="txt" class="time2"> </div>
+<div class="register1">
+	<label class="additionaldetails"><b><u>Aditional Details</u></b></label>
+		<form>
+		<label class="religion"><b>Religion:</b></label>
+		<select name="religion1" required autofocus> 
+				<option selected="yes" value="select">Select</option>
+				<option value="Hindus">Hindus</option>
+				<option value="Christians">Christians</option>
+				<option value="Muslims">Muslims</option>
+			    <option value="Sikhs">Sikhs</option>
+				<option value="Jainism">Jainisim</option>
+				<option value="others">others</option>
+		</select><br>
+		<label class="category"><b>Category:</b></label>
+		<select name="category1" required autofocus> 
+				<option selected="yes" value="select">Select</option>
+				<option value="General">General</option>
+				<option value="BC">BC</option>
+				<option value="SC">SC</option>
+			    <option value="ST">ST</option>
+		</select> <br>
+		<label class="income"><b>Income:</b></label>
+		<select name="income1">
+				<option required>select</option>
+				<option value="1">Null</option>
+				<option value="2"> <1,50,000 </option>
+				<option value="3"> < 2,50,000 </option>
+			    <option value="4"> < 5,00,000 </option>
+				<option value="5"> upto 10,00,000 </option>
+				<option value="6"> above 10,00,000 </option>
+		</select><br>
+		<label class="equalification"><b>Educational Qualification:<b></label>
+		<select name="equalification1">
+				<option required>select</option>
+				<option value="1"> Non-Graduate</option>
+				<option value="2"> Graduate</option>
+				<option value="3"> Post-Graduate </option>
+			    <option value="4"> Doctarate </option>
+				<option value="5"> Others</option>
+		</select><br>
+		<label class="Occupation"><b>Occupation:<b></label>
+		<select name="Occupation1">
+				<option required>select</option>
+				<option value="1"> Salaried</option>
+				<option value="2"> Self-Employed</option>
+				<option value="3"> Business </option>
+			    <option value="4"> Student </option>
+				<option value="5"> Others</option>
+		</select><br>
+		<label class="Pannumber"><b>Pan Number:<b></label>
+			<input type="text" name="Pannumber1" placeholder="Pan Number" required><br>
+			<label class="Adhaar"><b>Adhaar Number:<b></label>
+			<input type="text" name="Adhaar1" placeholder="Adhaar number" required></br>
+		<label class="senior"><b>Senior Citizen:<b></label>
+		<label class="yes1">YES
+			<input type="checkbox">
+			<span class="no"></span>
+		</label>
+		<label class="yes1">NO
+			<input type="checkbox">
+			<span class="no"></span>
+		</label>
+		<label class="eaccount"><b>Existing Account:<b></label>
+		<label class="yes11">YES
+			<input type="checkbox">
+			<span class="no1"></span>
+		</label>
+		<label class="yes11">NO
+			<input type="checkbox">
+			<span class="no1"></span>
+		</label>
+		<input type="submit" name="Next1" value="Next1"></br>
+		</form>
+</div>
+
+</body>
+</html>

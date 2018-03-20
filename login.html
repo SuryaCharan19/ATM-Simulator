@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head> 
+<title> ATMPROJECT </title>
+<meta charset="UTF-8">
+<meta name="viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ATMPROJECT1.css">
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+<body onload="startTime()">
+	
+	<div id="txt" class="time1"> </div>
+	
+	<label class="loginbox2header"><b>WELCOME TO ATM SERVICES</b></label>
+	<div class="loginbox1">
+	<label class="loginbox1header"><u>PlEASE SELECT YOUR TRANSACTIONS </u></label>
+		<form>
+			<input type="submit" name="Deposite" value="Deposite" class="divider" formaction="/deposit.html"> 
+			<input type="submit" name="Cash Withdrawal" value="Cash Withdrawal" class="divider">
+			<input type="submit" name="Mini Statement" value="Mini Statement" class="divider"> 
+			<input type="submit" name="Balance Enquiry" value="Balance Enquiry" class="divider" formaction="/Balance.html">
+			<input type="submit" name="Change Pin" value="Change Pin" class="divider"> 
+			<input type="submit" name="Exit" value="Exit" class="divider"> 
+		</form>
+	</div>	
+
+</body>
+</head>
+</html>
